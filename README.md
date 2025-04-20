@@ -1,38 +1,64 @@
-SSH Login Alert System A lightweight shell script to monitor SSH login attempts in real time. It detects successful logins from system logs extracts user and IP information and sends instant alerts via email. Ideal for enhancing server security by staying informed of login activity.
+<h1 align="center" id="title">p0rt-Monitor</h1>
 
-Features:
-Monitors system logs for successful SSH logins.
-Extracts details such as username IP address and login timestamp.
-Sends instant alerts via email to keep you informed.
-Works seamlessly with popular Linux distributions (Ubuntu Debian CentOS etc.).
-Simple setup and minimal dependencies.
+<p align="center"><img src="https://socialify.git.ci/SushantVijay/p0rt-monitor/image?font=Source%20Code%20Pro&amp;language=1&amp;name=1&amp;owner=1&amp;pattern=Brick%20Wall&amp;stargazers=1&amp;theme=Auto" alt="project-image"></p>
 
-Installation Steps:
-1. Clone the Repository
+<p id="description">The Port Monitoring Tool is a lightweight shell script that monitors open ports on a system in real-time. It helps detect changes in port activity such as newly opened or closed ports and provides alerts for suspicious or unauthorized behavior. This tool is ideal for system administrators and security enthusiasts to enhance network monitoring and improve system security.</p>
 
-https://github.com/SushantVijay/22h-al3rt.git
-2. Install Dependencies For Debian/Ubuntu:
+  
+  
+<h2>🧐 Features</h2>
 
-sudo apt update sudo apt install mailutils geoip-bin iptables
-4. Configure the Script
+Here're some of the project's best features:
 
-nano shell.sh
-5. Update the LOGFILE path if necessary (e.g. /var/log/secure for CentOS).
+*   Real-Time Monitoring: Continuously scans open ports at defined intervals.
+*   Change Alerts: Detects and reports newly opened or closed ports.
+*   Customizable: Allows configuration of monitoring intervals and alert mechanisms.
+*   Lightweight: Minimal resource usage with fast execution.
+*   Extensible: Can be integrated with logging systems or email alerts for advanced functionality.
 
-ALERT_EMAIL="your_email@example.com"
-6. Make the Script Executable
+<h2>🛠️ Installation Steps:</h2>
 
-chmod +x shell.sh
-7. Run the Script
+<p>1. Clone the repository:</p>
 
-sudo ./shell.sh
-8. To run in the background:
+```
+git clone https://github.com/ItsBeZ/ssh-slert-bash
+```
 
-nohup sudo ./shell.sh &
+<p>2. Make the script executable:</p>
+
+```
+chmod +x port_monitor.sh
+```
+
+<p>3. Run the script:</p>
+
+```
+./port_monitor.sh
+```
+
+<p>4. Modify the monitoring interval (MONITOR_INTERVAL) if needed by editing the script.</p>
+
+```
+MONITOR_INTERVAL=10  # Time in seconds between checks
+```
+
+<h2>🍰 Contribution Guidelines:</h2>
+
+We welcome contributions to enhance the Port Monitoring Tool! 
+
+*    Bug Reports: Open an issue with a detailed description of the problem. 
+*    Feature Requests: Suggest new features via the issue tracker. 
+*    Code Contributions: Fork the repository. 
+*    Create a feature branch (git checkout -b feature-name). 
+*    Commit your changes (git commit -m "Description of changes"). 
+*    Push to your fork and submit a pull request.
+
+  
+  
+<h2>💻 Built with</h2>
 
 Technologies used in the project:
-shell scripting
-mailx
-mailutils
-geoip-bin
-iptables
+
+*   Shell Scripting: Core implementation.
+*   Netstat: For retrieving port and network information.
+*   Linux Tools: awk sed grep and comm for data processing.
